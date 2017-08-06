@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman - Drake Edition</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<style>
+	
+	body { 
+		background:  url(assets/images/drakeanimated.gif) no-repeat center center fixed; 
+		background-size: auto;
+	}
+	h1{ font-weight: bold; }
+</style>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-xs-4">
+				<img src="assets/images/hangman.png">	
+				<h1> Drake Edition</h1>
+			</div>
+			<div class="col-md-4 col-xs-4"></div>
+			<div class="col-md-4 col-xs-4">
+				<div class="text-center">
+					<button class="btn btn-warning btn-xs theme-button"><span class="glyphicon glyphicon-music"></span> Play </button>
+					<button class="btn btn-default btn-xs pause-button"><span class="glyphicon glyphicon-pause"></span> Pause Song </button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+
+			<img src="assets/images/drake1.jpg">
+		</div>
+		<div class="row"><br></div>
+		<div class="row">
+			<div class="col-md-1 col-xs-1 col1 center-block"> 
+				<a href="game.html"><button class="btn btn-info btn-lg center-block">Click Here To Play!</button></a>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload = function() {
+			audioElement.play();
+		};
+		var audioElement = document.createElement("audio");
+		audioElement.setAttribute("src", "assets/images/drakemusic.mp3");
+
+      // Theme Button
+      $(".theme-button").on("click", function() {
+      	audioElement.play();
+      });
+
+      $(".pause-button").on("click", function() {
+      	audioElement.pause();
+      });
+  </script>
+</body>
+</html>
